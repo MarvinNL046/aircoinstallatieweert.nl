@@ -8,8 +8,8 @@ import { generateOrganizationSchema } from "@/lib/schema"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Airco Merken | Airco Offerte Limburg",
-  description: "Ontdek ons uitgebreide assortiment aan hoogwaardige airconditioning merken. Van Daikin tot Mitsubishi, wij bieden alleen de beste kwaliteit.",
+  title: "Top 10 Airco Merken 2024 | 🏆 Daikin, Mitsubishi & Meer",
+  description: "Vergelijk de BESTE airco merken van 2024! ✓ Daikin vanaf €1299 ✓ Mitsubishi Electric ✓ Samsung WindFree. Krijg -10% op topmerken. Bekijk nu →",
   keywords: [
     "airco merken",
     "Daikin",

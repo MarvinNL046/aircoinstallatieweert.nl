@@ -1,23 +1,26 @@
 import { Metadata } from "next"
-import { HeroSection } from "@/components/sections/hero-section"
-import { FeaturesSection } from "@/components/sections/features-section"
-import { ServicesSection } from "@/components/sections/services-section"
+import { HeroOptimized } from "@/components/sections/hero-optimized"
+import { ServicesOptimized } from "@/components/sections/services-optimized"
+import { WhyUs } from "@/components/sections/why-us"
+import { BrandLogos } from "@/components/sections/brand-logos"
+import { ContactOptimized } from "@/components/sections/contact-optimized"
 import { TestimonialsSection } from "@/components/sections/testimonials"
-import { CTASection } from "@/components/sections/cta-section"
 import { CTABanner } from "@/components/sections/cta-banner"
-import { generateOrganizationSchema } from "@/lib/schema"
+import { generateOrganizationSchema, generateReviewSchema } from "@/lib/schema"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: 'StayCool Airco Weert | #1 in Airconditioning ✓',
-  description: 'Dé airco specialist van Weert! Professionele airco installatie voor woning en bedrijf door StayCool Airco. ✓ Gratis offerte ✓ Erkend installateur ✓ Alle topmerken ✓ 5 jaar garantie. Bel: 046 202 1430',
+  title: 'Airco Weert €1299 | ⚡24u Offerte | ⭐ 4.7/5 | StayCool™',
+  description: 'Airco nodig in Weert? ⚡ Installatie binnen 48u ✓ Vanaf €1299 ✓ 5 jaar garantie ✓ Gratis advies. Bel nu: 046 202 1430 of vraag online offerte aan!',
   alternates: {
     canonical: 'https://aircoinstallatieweert.nl'
-  }
+  },
+  keywords: 'airco weert, airco installatie weert, airco limburg, airco specialist limburg, airconditioning weert, airco installateur limburg'
 }
 
 export default function HomePage() {
   const organizationSchema = generateOrganizationSchema()
+  const reviewSchema = generateReviewSchema()
 
   return (
     <>
@@ -26,43 +29,19 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       
       <main>
-        <CTABanner theme="light" />
-        <HeroSection />
-        <FeaturesSection />
-        <ServicesSection />
-        <section className="py-16 bg-gray-50">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-8">Bekijk Onze Bedrijfsvideo</h2>
-            <div className="max-w-3xl mx-auto aspect-video">
-              <iframe 
-                className="w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/9m-jkGgfLog" 
-                title="StayCool Airco Bedrijfsvideo" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="text-center mt-8">
-              <p className="text-lg text-muted-foreground">
-                Ontdek hoe StayCool Airco uw ideale partner is voor airconditioning in Weert en omgeving.
-              </p>
-              <p className="mt-4">
-                <a 
-                  href="https://staycoolairco.nl" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  Bezoek onze hoofdwebsite voor meer informatie
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
+        <HeroOptimized />
+        <ServicesOptimized />
+        <WhyUs />
+        <BrandLogos />
         <TestimonialsSection />
-        <CTASection />
+        <ContactOptimized />
         <CTABanner theme="dark" />
       </main>
     </>

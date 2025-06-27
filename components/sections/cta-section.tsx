@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-blue-600 py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-orange-500 to-orange-600 py-24">
       <div className="absolute inset-0 bg-grid-white/[0.2] bg-grid-8" />
       <div className="container relative">
         <div className="mx-auto max-w-4xl">
@@ -23,21 +23,21 @@ export function CTASection() {
                   </p>
                   <ul className="mt-6 space-y-3 text-sm">
                     <li className="flex items-center gap-2">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">✓</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-white">✓</span>
                       Gratis inspectie ter plaatse
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">✓</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-white">✓</span>
                       Persoonlijk advies
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-white">✓</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-500 text-white">✓</span>
                       Scherpe prijsgarantie
                     </li>
                   </ul>
                 </div>
                 <div className="flex flex-col justify-center gap-4">
-                  <Button size="lg" className="w-full" asChild>
+                  <Button size="lg" className="w-full bg-gray-900 hover:bg-gray-800" asChild>
                     <Link href="/offerte">
                       <Mail className="mr-2 h-4 w-4" />
                       Offerte Aanvragen
@@ -46,7 +46,7 @@ export function CTASection() {
                   <Button size="lg" variant="outline" className="w-full" asChild>
                     <Link href="tel:0462021430">
                       <Phone className="mr-2 h-4 w-4" />
-                      Bel 0462021430
+                      046 202 1430
                     </Link>
                   </Button>
                   <p className="mt-2 text-center text-sm text-muted-foreground">

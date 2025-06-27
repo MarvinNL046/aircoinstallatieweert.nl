@@ -9,7 +9,7 @@ import { Phone } from "lucide-react"
 export function HeroSection() {
   return (
     <section 
-      className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 py-20 text-white"
+      className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 py-20 text-white"
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0 bg-grid-white/[0.2] bg-grid-8" aria-hidden="true" />
@@ -23,10 +23,10 @@ export function HeroSection() {
             >
               StayCool Airco Weert
             </h1>
-            <p className="mt-2 text-3xl font-semibold text-blue-100">
+            <p className="mt-2 text-3xl font-semibold text-gray-300">
               Professionele Airco Installatie
             </p>
-            <p className="mt-6 text-xl text-blue-100">
+            <p className="mt-6 text-xl text-gray-300">
               Geniet van optimaal klimaatcomfort het hele jaar door in Weert en omgeving. 
               Vakkundige installatie door gecertificeerde monteurs met 5 jaar garantie.
             </p>
@@ -35,7 +35,7 @@ export function HeroSection() {
                 href="https://youtu.be/9m-jkGgfLog" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-white hover:text-blue-200 transition-colors"
+                className="inline-flex items-center text-white hover:text-orange-400 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
@@ -46,7 +46,7 @@ export function HeroSection() {
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link href="/offerte">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
                   Offerte Aanvragen
                 </Button>
               </Link>
@@ -62,7 +62,7 @@ export function HeroSection() {
               role="list"
               aria-label="Voordelen"
             >
-              {["5 jaar garantie", "24/7 service", "Gratis advies"].map((item) => (
+              {["5 jaar garantie", "Snelle service", "Gratis advies"].map((item) => (
                 <div 
                   key={item} 
                   className="flex items-center gap-2"

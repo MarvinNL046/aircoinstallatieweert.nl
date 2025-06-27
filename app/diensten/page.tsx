@@ -7,16 +7,15 @@ import Link from "next/link"
 import diensten from "@/data/diensten.json"
 
 export const metadata: Metadata = {
-  title: "Onze Diensten | Airco Offerte Limburg",
-  description: "Bekijk ons complete aanbod van airconditioning diensten in Limburg. Van installatie en onderhoud tot reparatie, wij zijn uw betrouwbare partner.",
+  title: "Airco Services Limburg | ⭐ 4.7/5 | Installatie €1299",
+  description: "⚡ Alle airco services in Limburg onder 1 dak. ✓ Installatie vanaf €1299 ✓ Onderhoud €11/maand ✓ 48u reparatie. Bel direct: 046 202 1430",
   keywords: [
-    "airco diensten",
-    "airconditioning services",
-    "airco installatie",
-    "airco onderhoud",
-    "airco reparatie",
-    "Limburg",
-    "professionele airco service"
+    "airco service limburg",
+    "airco installatie limburg",
+    "airco onderhoud limburg",
+    "airco reparatie weert",
+    "airco montage limburg",
+    "airco bedrijf limburg"
   ],
 }
 

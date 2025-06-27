@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   }
 
   return {
-    title: `Airco Installatie ${cityData.city} | StayCool Airco Maastricht`,
-    description: `Professionele airconditioning installatie en onderhoud in ${cityData.city} door StayCool Airco. ✓ Erkend ✓ Gecertificeerd ✓ Vakkundig. Vraag nu een vrijblijvende offerte aan!`,
+    title: `Airco ${cityData.city} €1299 | ⚡ 48u Installatie | ⭐ 4.7/5`,
+    description: `Airco nodig in ${cityData.city}? Bespaar tot 40% op energie! ✓ Vaste prijs €1299 ✓ 5 jaar garantie ✓ Gratis advies. Bel NU: 046 202 1430`,
     openGraph: {
-      title: `Airco Installatie ${cityData.city} | StayCool Airco Maastricht`,
-      description: `Professionele airconditioning installatie en onderhoud in ${cityData.city} door StayCool Airco. Erkend en gecertificeerd installateur.`,
-      url: `https://aircoinstallatie-maastricht.nl/steden/${params.city}`,
-      siteName: "StayCool Airco Maastricht",
+      title: `Airco Installatie ${cityData.city} | StayCool Airco`,
+      description: `Professionele airconditioning in ${cityData.city}. Erkend installateur met 5 jaar garantie.`,
+      url: `https://aircoinstallatieweert.nl/steden/${params.city}`,
+      siteName: "StayCool Airco Weert",
       locale: "nl_NL",
       type: "website",
     },

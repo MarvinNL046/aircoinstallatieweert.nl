@@ -5,8 +5,8 @@ import { Breadcrumb } from "@/components/navigation/breadcrumb"
 import { blogPosts } from "@/data/blog-posts"
 
 export const metadata: Metadata = {
-  title: "Blog | Airco Offerte Limburg",
-  description: "Lees onze laatste artikelen over airconditioning, klimaatbeheersing, energiebesparing en meer.",
+  title: "Airco Blog | 🔥 27 Tips & Tricks | Bespaar €500+/jaar",
+  description: "GRATIS airco tips die €500+ besparen! ✓ Onderhoudsgidsen ✓ Energie hacks ✓ Storingscodes uitgelegd. Start met besparen vandaag →",
   keywords: [
     "airco blog",
     "klimaatbeheersing blog",

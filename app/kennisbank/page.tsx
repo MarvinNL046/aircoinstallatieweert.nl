@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Card } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Kennisbank | StayCool Airco Maastricht",
-  description: "Ontdek alles wat u moet weten over airconditioning en klimaatbeheersing in onze uitgebreide kennisbank. Professioneel advies van StayCool Airco.",
+  title: "Airco Kennisbank | 📚 50+ Artikelen | Word Expert in 10 Min",
+  description: "GRATIS toegang tot 50+ expertartikelen! ✓ Installatie guides ✓ Onderhoudstips ✓ Problemen oplossen ✓ Bespaar €100+ per jaar. Start nu →",
 }
 
 const articles = [

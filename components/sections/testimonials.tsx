@@ -38,7 +38,7 @@ export function TestimonialsSection() {
               <CardHeader>
                 <div className="flex gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    <Star key={i} className="h-5 w-5 fill-orange-500 text-orange-500" />
                   ))}
                 </div>
               </CardHeader>

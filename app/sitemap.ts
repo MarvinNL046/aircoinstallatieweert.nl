@@ -20,6 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { route: 'kennisbank', priority: 0.6 },
     { route: 'merken', priority: 0.6 },
     { route: 'steden', priority: 0.8 },
+    // Local landing pages for major cities
+    { route: 'airco-installatie-maastricht', priority: 0.9 },
+    { route: 'airco-service-heerlen', priority: 0.8 },
+    { route: 'airco-onderhoud-sittard', priority: 0.8 },
+    { route: 'airco-installatie-roermond', priority: 0.8 },
+    { route: 'airco-service-venlo', priority: 0.8 },
   ].map((page) => ({
     url: `${siteUrl}/${page.route}`,
     lastModified,

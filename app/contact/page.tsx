@@ -4,8 +4,8 @@ import ContactForm from '@/components/forms/ContactForm';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact | StayCool Airco Weert',
-  description: 'Neem contact op met StayCool Airco Weert voor een vrijblijvende offerte of advies over airconditioning installatie en onderhoud in Weert en omgeving.',
+  title: 'Contact StayCool™ | 📞 Direct: 046 202 1430 | ⚡ Nu Bereikbaar',
+  description: 'Neem NU contact op voor airco advies! ✓ Direct antwoord ✓ Gratis offerte ✓ WhatsApp: 0636481054 ✓ 4.7★ klantwaardering. Bel of mail vandaag nog!',
 };
 
 const contactInfo = [

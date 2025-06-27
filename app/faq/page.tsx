@@ -7,16 +7,18 @@ import {
 } from "@/components/ui/accordion"
 import { Breadcrumb } from "@/components/navigation/breadcrumb"
 import { CTAWithForm } from "@/components/sections/cta-with-form"
+import { generateFAQSchema } from "@/lib/schema"
+import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Veelgestelde Vragen | Airco Offerte Limburg",
-  description: "Vind antwoorden op veelgestelde vragen over airconditioning, installatie, onderhoud en meer.",
+  title: "FAQ Airco Weert | ❓ Alle Vragen Beantwoord | StayCool",
+  description: "❓ Veelgestelde vragen over airco installatie in Weert. ✓ Kosten vanaf €1299 ✓ Geen vergunning nodig ✓ Direct antwoord. Bel: 046 202 1430",
 }
 
 const faqs = [
   {
     question: "Wat kost een airco installatie?",
-    answer: "De kosten van een airco installatie variëren afhankelijk van verschillende factoren zoals het type systeem, het aantal units en de complexiteit van de installatie. Gemiddeld ligt de prijs tussen €1.000 en €2.500 voor een single-split systeem. Neem contact met ons op voor een exacte prijsopgave."
+    answer: "Een complete airco installatie start vanaf €1299 inclusief montage. De exacte prijs hangt af van het type systeem, aantal units en complexiteit. Vraag een gratis offerte aan voor een prijsopgave op maat binnen 24 uur."
   },
   {
     question: "Heb ik een vergunning nodig voor een airco?",
@@ -40,9 +42,16 @@ export default function FAQPage() {
   const breadcrumbItems = [
     { label: "FAQ", href: "/faq" }
   ];
+  
+  const faqSchema = generateFAQSchema(faqs);
 
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container py-12">
         <Breadcrumb items={breadcrumbItems} />
         <h1 className="mb-8 text-4xl font-bold">Veelgestelde Vragen</h1>

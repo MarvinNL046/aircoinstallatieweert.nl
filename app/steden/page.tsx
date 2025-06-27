@@ -6,8 +6,8 @@ import { getCities } from "@/lib/cities"
 import { AirVent, MapPin, ThermometerSun, Wrench, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: 'Airco Installatie Limburg | Alle Steden en Regio\'s',
-  description: 'Professionele airco installatie in heel Limburg. Vind uw stad of regio en vraag direct een vrijblijvende offerte aan. ✓ Erkend ✓ Gecertificeerd ✓ Vakkundig.',
+  title: '📍 Airco in 43 Steden Limburg | ⚡ Binnen 48u | €1299 All-in',
+  description: '🚀 DIRECT airco installatie in UW stad! ✓ Maastricht t/m Venlo ✓ Vaste prijs €1299 ✓ 48u service ✓ 5 jaar garantie. Kies uw stad →',
 }
 
 export default async function CitiesPage() {
@@ -43,7 +43,7 @@ export default async function CitiesPage() {
       icon: Wrench,
       title: "Onderhoud & Service",
       description: "Regelmatig onderhoud en snelle service bij storingen",
-      features: ["24/7 service", "Onderhoudscontracten", "Alle merken"]
+      features: ["Snelle service", "Onderhoudscontracten", "Alle merken"]
     }
   ]
 

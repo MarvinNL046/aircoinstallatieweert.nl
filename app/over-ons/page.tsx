@@ -4,8 +4,8 @@ import { Breadcrumb } from "@/components/navigation/breadcrumb";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: 'Over Ons | StayCool Airco Weert',
-  description: 'Maak kennis met StayCool Airco - uw lokale specialist voor airconditioning installatie, onderhoud en reparatie in Weert en omgeving. Ontdek onze expertise en persoonlijke aanpak.',
+  title: 'Over StayCool™ | ⭐ 4.7/5 | 10+ Jaar Expert | #1 in Limburg',
+  description: 'Ontdek waarom 163+ klanten voor StayCool kiezen! ✓ F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Lokale expert sinds 2014. Lees ons verhaal →',
 };
 
 const features = [

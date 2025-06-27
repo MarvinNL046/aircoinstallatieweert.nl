@@ -1,4 +1,4 @@
-import { Organization, WithContext, Service, LocalBusiness, BreadcrumbList } from "schema-dts"
+import { Organization, WithContext, Service, LocalBusiness, BreadcrumbList, FAQPage } from "schema-dts"
 
 export function generateOrganizationSchema(): WithContext<Organization> {
   return {
@@ -28,6 +28,13 @@ export function generateOrganizationSchema(): WithContext<Organization> {
     areaServed: {
       "@type": "City",
       name: "Weert",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: "163",
+      bestRating: "5",
+      worstRating: "1"
     }
   }
 }
@@ -84,6 +91,25 @@ export function generateLocalBusinessSchema(city: string): WithContext<LocalBusi
       addressCountry: "NL",
     },
     priceRange: "€€",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: "09:00",
+        closes: "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Friday",
+        opens: "09:00",
+        closes: "16:00"
+      }
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: "163"
+    }
   }
 }
 
@@ -97,5 +123,43 @@ export function generateBreadcrumbSchema(items: { name: string; item: string }[]
       name: item.name,
       item: `https://aircoinstallatieweert.nl${item.item}`,
     })),
+  }
+}
+
+export function generateFAQSchema(faqs: Array<{question: string, answer: string}>): WithContext<FAQPage> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(faq => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  }
+}
+
+export function generateReviewSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "StayCool Airco Weert",
+    image: "https://aircoinstallatieweert.nl/og-image.png",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Aan de Bogen 11",
+      addressLocality: "Nieuwstadt",
+      postalCode: "6118 AS",
+      addressCountry: "NL"
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: "163",
+      bestRating: "5"
+    },
+    priceRange: "€€ - Installatie vanaf €1299"
   }
 }

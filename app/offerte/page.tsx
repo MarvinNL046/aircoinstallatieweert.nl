@@ -4,8 +4,8 @@ import { PriceCalculator } from "@/components/calculators/price-calculator"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
-  title: "Offerte Aanvragen | Airco Offerte Limburg",
-  description: "Vraag een vrijblijvende offerte aan voor uw airconditioning project. Ontvang binnen 24 uur een offerte op maat.",
+  title: "Gratis Airco Offerte | 📋 Binnen 24u | Direct Prijzen",
+  description: "🎯 Vraag GRATIS offerte aan voor airco installatie. ✓ Vaste all-in prijs ✓ Binnen 24u reactie ✓ Geen verplichtingen. Start hier uw aanvraag!",
 }
 
 export default function OffertePage() {

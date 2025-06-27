@@ -92,7 +92,7 @@ export function Header() {
                   </Link>
                 ))}
                 <Link href="/offerte" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Button className="w-full bg-orange-500 hover:bg-orange-600">
                     Offerte Aanvragen
                   </Button>
                 </Link>
@@ -105,7 +105,7 @@ export function Header() {
         <div className="hidden lg:block">
           <Link href="/offerte">
             <Button 
-              className="bg-green-600 hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              className="bg-orange-500 hover:bg-orange-600 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
               aria-label="Vraag een offerte aan"
             >
               Offerte Aanvragen
