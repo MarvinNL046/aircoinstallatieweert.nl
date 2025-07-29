@@ -3,6 +3,7 @@ import { HeroOptimized } from "@/components/sections/hero-optimized"
 import { ServicesOptimized } from "@/components/sections/services-optimized"
 import { WhyUs } from "@/components/sections/why-us"
 import { BrandLogos } from "@/components/sections/brand-logos"
+import { AircoModels } from "@/components/sections/airco-models"
 import { ContactOptimized } from "@/components/sections/contact-optimized"
 import { TestimonialsSection } from "@/components/sections/testimonials"
 import { CTABanner } from "@/components/sections/cta-banner"
@@ -40,6 +41,7 @@ export default function HomePage() {
         <ServicesOptimized />
         <WhyUs />
         <BrandLogos />
+        <AircoModels />
         <TestimonialsSection />
         <ContactOptimized />
         <CTABanner theme="dark" />

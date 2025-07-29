@@ -95,7 +95,7 @@ export function ContactOptimized() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
