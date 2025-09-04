@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -212,6 +212,27 @@ export function ContactOptimized() {
                 {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
               </Button>
             </form>
+
+            <div className="mt-4">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-200"></div>
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">of</span>
+                </div>
+              </div>
+              
+              <a 
+                href="https://afspraken.staycoolairco.nl/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-4 w-full inline-flex items-center justify-center px-6 py-4 border-2 border-orange-500 text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-200"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                Plan Direct Online Een Afspraak
+              </a>
+            </div>
 
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-center text-gray-600">

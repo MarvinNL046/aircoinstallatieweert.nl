@@ -30,9 +30,9 @@ export function CTABanner({ theme = "light" }: CTABannerProps) {
               </Link>
             </Button>
             <Button size="sm" className="bg-orange-500 hover:bg-orange-600" asChild>
-              <Link href="/offerte">
+              <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-4 w-4" />
-                Plan Afspraak
+                Plan Afspraak Online
               </Link>
             </Button>
           </div>

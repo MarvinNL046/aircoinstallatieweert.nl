@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Phone, Star, CheckCircle, Clock } from 'lucide-react';
+import { ArrowRight, Phone, Star, CheckCircle, Clock, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -220,6 +220,17 @@ export function HeroOptimized() {
                   {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5" />}
                 </Button>
               </form>
+
+              <div className="mt-4">
+                <Link 
+                  href="https://afspraken.staycoolairco.nl/"
+                  target="_blank"
+                  className="w-full inline-flex items-center justify-center px-6 py-4 bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/30 hover:border-white/60 transition-all duration-200"
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Plan Direct Een Afspraak
+                </Link>
+              </div>
 
               <p className="text-center text-white/80 text-sm mt-4">
                 Of bel direct: <a href="tel:0462021430" className="text-orange-400 hover:text-orange-300 font-semibold">046 202 1430</a>
