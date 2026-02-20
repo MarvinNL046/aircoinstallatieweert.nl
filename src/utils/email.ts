@@ -9,7 +9,9 @@ emailjs.init({
 const EMAILJS_SERVICE_ID = "service_1rruujp";
 const EMAILJS_TEMPLATE_ID = "template_rkcpzhg";
 
-const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/k90zUH3RgEQLfj7Yc55b/webhook-trigger/54670718-ea44-43a1-a81a-680ab3d5f67f";
+// LeadFlow CRM configuration
+const LEADFLOW_URL = "https://wetryleadflow.com/api/webhooks/leads";
+const LEADFLOW_API_KEY = "lf_lRyHo1ENukt9VsG9gYT8EKeDA_nKuoQ1";
 
 export interface EmailData {
   name: string;
@@ -48,45 +50,54 @@ const sendViaEmailJS = async (data: EmailData): Promise<boolean> => {
   }
 };
 
-const sendToWebhook = async (data: EmailData): Promise<boolean> => {
+// Send data to LeadFlow CRM
+const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
   try {
-    const webhookData = {
-      data: {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        city: data.city || 'Not specified',
-        message: data.message
+    const nameParts = data.name.trim().split(' ');
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || '';
+
+    const leadflowData = {
+      firstName,
+      lastName,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+      source: 'website-contact',
+      customFields: {
+        city: data.city,
+        woonplaats: data.city
       }
     };
 
     if (DEBUG_MODE) {
-      console.log('Sending to webhook:', webhookData);
+      console.log('Sending data to Leadflow CRM:', leadflowData);
     }
 
-    const response = await fetch(WEBHOOK_URL, {
+    const response = await fetch(LEADFLOW_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "X-API-Key": LEADFLOW_API_KEY
       },
-      body: JSON.stringify(webhookData)
+      body: JSON.stringify(leadflowData)
     });
 
-    if (DEBUG_MODE) {
-      console.log('Webhook response status:', response.status);
-    }
-
     if (!response.ok) {
+      const errorText = await response.text();
       if (DEBUG_MODE) {
-        console.error('Webhook response not ok:', response.status, response.statusText);
+        console.error(`Leadflow error (${response.status}):`, errorText);
       }
       return false;
     }
-    
+
+    if (DEBUG_MODE) {
+      console.log('Leadflow submission successful');
+    }
     return true;
   } catch (error) {
     if (DEBUG_MODE) {
-      console.error('Webhook error:', error);
+      console.error('Leadflow submission failed:', error);
     }
     return false;
   }
@@ -94,24 +105,16 @@ const sendToWebhook = async (data: EmailData): Promise<boolean> => {
 
 export const sendEmail = async (data: EmailData): Promise<void> => {
   const emailJSSuccess = await sendViaEmailJS(data);
-  const webhookSuccess = await sendToWebhook(data);
-  
+  const leadflowSuccess = await sendToLeadflow(data);
+
   if (DEBUG_MODE) {
     console.log('Email sending results:', {
       emailJS: emailJSSuccess,
-      webhook: webhookSuccess
+      leadflow: leadflowSuccess
     });
   }
-  
-  if (!emailJSSuccess && !webhookSuccess) {
-    throw new Error('Failed to send contact form data');
-  }
-};
 
-export const sendWebhookOnly = async (data: EmailData): Promise<void> => {
-  const success = await sendToWebhook(data);
-  
-  if (!success) {
-    throw new Error('Failed to send data to webhook');
+  if (!emailJSSuccess && !leadflowSuccess) {
+    throw new Error('Failed to send contact form data');
   }
 };
